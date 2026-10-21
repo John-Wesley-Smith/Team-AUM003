@@ -10,7 +10,7 @@ export function App() {
       </div>
       <div className="Customer-dashboard-container">
         <div>
-          <input type="text" />
+          <input type="text" id="one"/>
           <button className="search-btn">Search</button>        
           <button className="filter-btn" >Filter</button>
         </div>

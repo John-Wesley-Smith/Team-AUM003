@@ -1,6 +1,35 @@
 .header-section{
   display: flex;
   justify-content: center;
+  background-color: rgb(148, 84, 181);
+  color: aliceblue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Customer-dashboard-container{
+  margin-top: 25px;
+}
+
+.search-btn{
+   margin-left: 6px;
+   background-color:rgb(148, 84, 181) ;
+   color: aliceblue;
+   padding: 6px;
+   border-radius: 5px;
+}
+
+.filter-btn{
+  margin-left: 6px;
+  background-color:rgb(148, 84, 181) ;
+  color: aliceblue;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+#one{
+  padding: 5px;
+  border-radius: 5px;
+  color:rgb(148, 84, 181)  ;
 }
 
 .customer-summary{
