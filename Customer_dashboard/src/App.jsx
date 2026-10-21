@@ -53,19 +53,33 @@ export function App() {
       <div className="Customer-dashboard-container">
         <div>
           <input type="text" />
-          <button className="search-btn" onChange={DisplayCustomer}>Search by Id</button>        
+          <button className="search-btn">Search</button>        
           <button className="filter-btn" >Filter</button>
         </div>
         <div className="customer-summary">
           <div className="customer-fields">
-              <p>customer_id</p>
-              <p>name</p>
-              <p>Contact</p>
-              <p>Request</p>
-              <p>notes</p>
+              <p class="id2">customer_id</p>
+              <p class="name2">name</p>
+              <p class="contact2">Contact</p>
+              <p class="request2">Request</p>
+              <p class="notes2">notes</p>
           </div>
 
-          <DisplayCustomer />
+          <div className="customer-data-container">
+            {data.map((items) => {
+            return(
+             <div key={items.id} className="customer-data">
+              <p>{items.id}</p>
+              <p>{items.name}</p>
+              <p>{items.contact}</p>
+              <p>{items.request}</p>
+              <p>{items.note}</p>
+            </div> 
+            )
+          })
+          } 
+      
+          </div>                    
         </div>
       </div>
     </>

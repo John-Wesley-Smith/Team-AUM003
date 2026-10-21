@@ -29,23 +29,60 @@
 #one{
   padding: 5px;
   border-radius: 5px;
-  color:rgb(148, 84, 181)  ;
+  color:rgb(137, 39, 185);
+  border-color: rgb(137, 39, 185) ;
+  margin-left: 25px;
 }
 
 .customer-summary{
-  margin: 10px 15px;
+  margin: 20px 45px;
+  background-color: rgba(174, 103, 235, 0.4);
+  padding: 4px;
+  margin: 25px;
+  border-radius: 4px 4px;
+  justify-self:normal;
+  box-shadow: 5px;
 }
 
 .customer-fields{
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
 }
 
 /* .customer-fields p {
   margin-left: 10px;
 } */
 
+.id2{
+  margin-right: 145px;
+}
+.name2{
+  margin-right: 145px;
+}
+
 .customer-data{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+
 }
+
+.id1{
+  margin: 45px;
+}
+
+.name1{
+  margin: 45px;
+}
+
+.contact1{
+  margin: 45px;
+}
+
+.request1{
+  margin: 45px;
+}
+
+.notes1{
+  margin: 45px;
+}
+
