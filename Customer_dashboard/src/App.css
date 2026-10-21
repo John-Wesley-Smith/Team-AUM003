@@ -1,0 +1,17 @@
+.header-section{
+  display: flex;
+  justify-content: center;
+}
+
+.customer-summary{
+  margin: 10px 15px;
+}
+
+.customer-fields{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .customer-fields p {
+  margin-left: 10px;
+} */
