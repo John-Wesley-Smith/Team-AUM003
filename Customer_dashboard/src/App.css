@@ -59,10 +59,20 @@
 .name2{
   margin-right: 145px;
 }
+.contact2{
+  margin-right: 100px;
+}
+
+.request2{
+  margin-right: 100px;
+}
+.notes2{
+  margin-right: 100px;
+}
 
 .customer-data{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
 }
 
