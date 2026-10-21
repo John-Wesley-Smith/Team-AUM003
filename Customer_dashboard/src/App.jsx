@@ -1,8 +1,38 @@
+import { useRef, useState } from "react"
 import "./App.css"
 import { data } from "./assets/data"
 
 export function App() {
-  console.log(data);
+
+  const[inputText, setInputText] = useState('');
+  const customerRef = useRef();
+
+  function searchById() {
+    return(
+      <div className="customer-data-container">
+            {data.map((items) => {
+            return(
+              (items.name === inputText) &&(
+             <div key={items.id} className="customer-data">
+              <p>{items.id}</p>
+              <p>{items.name}</p>
+              <p>{items.contact}</p>
+              <p>{items.request}</p>
+              <p>{items.note}</p>
+            </div> 
+              )
+            )
+          })
+          } 
+      
+          </div>  
+    )
+  }
+
+  function inputTextsaver(event){
+    setInputText(event.target.value);
+  }
+
   return (
     <>
       <div className="header-section" >
@@ -10,7 +40,7 @@ export function App() {
       </div>
       <div className="Customer-dashboard-container">
         <div>
-          <input type="text" id="one"/>
+          <input type="text" />
           <button className="search-btn">Search</button>        
           <button className="filter-btn" >Filter</button>
         </div>
@@ -23,24 +53,21 @@ export function App() {
               <p>notes</p>
           </div>
 
-          <div className="customer-data">
-            {/* {data.map((items) => {
+          <div className="customer-data-container">
+            {data.map((items) => {
             return(
-             <div>
-              <h1>Hello</h1>
-              <p>customer_id</p>
-              <p>name</p>
-              <p>Contact</p>
-              <p>Request</p>
-              <p>notes</p>
+             <div key={items.id} className="customer-data">
+              <p>{items.id}</p>
+              <p>{items.name}</p>
+              <p>{items.contact}</p>
+              <p>{items.request}</p>
+              <p>{items.note}</p>
             </div> 
             )
           })
-          }  */}
+          } 
       
-          </div>
-          
-          
+          </div>                    
         </div>
       </div>
     </>
