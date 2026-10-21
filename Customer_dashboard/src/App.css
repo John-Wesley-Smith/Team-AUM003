@@ -15,3 +15,8 @@
 /* .customer-fields p {
   margin-left: 10px;
 } */
+
+.customer-data{
+  display: flex;
+  justify-content: space-between;
+}
