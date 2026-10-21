@@ -1,18 +1,19 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { Route, Router } from "react-router"
 import "./App.css"
 import { data } from "./assets/data"
 
 export function App() {
 
   const[inputText, setInputText] = useState('');
-  const customerRef = useRef();
 
-  function searchById() {
+  function DisplayCustomer() {
+    // console.log(inputText)
     return(
-      <div className="customer-data-container">
+      <div className="customer-data-container" >
             {data.map((items) => {
             return(
-              (items.name === inputText) &&(
+              (inputText === '') ? (
              <div key={items.id} className="customer-data">
               <p>{items.id}</p>
               <p>{items.name}</p>
@@ -21,6 +22,17 @@ export function App() {
               <p>{items.note}</p>
             </div> 
               )
+            :(
+              (inputText === items.id) && (
+                <div key={items.id} className="customer-data">
+              <p>{items.id}</p>
+              <p>{items.name}</p>
+              <p>{items.contact}</p>
+              <p>{items.request}</p>
+              <p>{items.note}</p>
+            </div> 
+              )
+          )
             )
           })
           } 
@@ -41,7 +53,7 @@ export function App() {
       <div className="Customer-dashboard-container">
         <div>
           <input type="text" />
-          <button className="search-btn">Search</button>        
+          <button className="search-btn" onChange={DisplayCustomer}>Search by Id</button>        
           <button className="filter-btn" >Filter</button>
         </div>
         <div className="customer-summary">
@@ -53,21 +65,7 @@ export function App() {
               <p>notes</p>
           </div>
 
-          <div className="customer-data-container">
-            {data.map((items) => {
-            return(
-             <div key={items.id} className="customer-data">
-              <p>{items.id}</p>
-              <p>{items.name}</p>
-              <p>{items.contact}</p>
-              <p>{items.request}</p>
-              <p>{items.note}</p>
-            </div> 
-            )
-          })
-          } 
-      
-          </div>                    
+          <DisplayCustomer />
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@ export const data = [
         id: 2, 
         name : "Arjun",
         contact: 45678952267,
-        resquest : "Order delivery",
+        request : "Order delivery",
         note: "With in today"
     },
     {
